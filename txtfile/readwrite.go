@@ -1,0 +1,3 @@
+package txtfile
+
+func ReadFile() {}
