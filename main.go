@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-					"goreloaded"
 	"log"
 	"os"
 	"regexp"
@@ -42,10 +41,9 @@ func main() {
 		resultFile := os.Args[2]
 		WriteFile(resultFile, modifiedStr)
 	}
-	goreloaded.ReadFile()
 }
 
-func ReadFile(fileName string) string {
+					func ReadFile(fileName string) string {
 	result := ""
 	file, err := os.Open("sample.txt")
 	// check for errors opening the file
