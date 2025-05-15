@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -40,10 +39,6 @@ func applyCaseModifiers(tokens []string) []string {
 			count := 1
 			if len(parts) > 1 {
 				c, err := strconv.Atoi(strings.TrimSpace(parts[1]))
-				fmt.Println(mod)               // debugging
-				fmt.Println(len(parts))        // debugging
-				fmt.Println(command, parts[1]) // debugging
-				fmt.Println(command, c)        // debugging
 				if err == nil {
 					count = c
 				}
@@ -111,27 +106,6 @@ func fixIndefiniteArticles(tokens []string) []string {
 func formatPunctuation(tokens []string) []string {
 	var result []string
 	i := 0
-
-	// contentString := ""
-
-	// for i, b := range tokens {
-	// 	if i < len(tokens)-1 {
-	// 		contentString += string(b) + " "
-	// 	} else {
-	// 		contentString += string(b)
-	// 	}
-	// }
-
-	fmt.Println(tokens) // debugging
-
-	// re := regexp.MustCompile(`\([a-z]+(?:,\s*\d+)?\)|[^\s()]+`)
-	// re := regexp.MustCompile(`\([a-z]+(?:,\s*\d+)?\)|[^\s()]+| [,]`)
-
-	// re := regexp.MustCompile(`([^\s]+)\s+([,.!?])`)
-
-	// newTokens := re.FindAllString(contentString, -1)
-
-	// fmt.Println(newTokens) // debugging
 
 	for i < len(tokens) {
 		current := tokens[i]
