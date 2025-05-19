@@ -1,3 +1,12 @@
+# Go-Reloaded
+Instructions
+1. `git clone https://learn.01founders.co/git/gappeagy/go-reloaded`
+2. `cd go-reloaded`
+3. Add sample text to sample.txt
+3. `go run . sample.txt result.txt`
+
+---
+
 # Using regular expressions
 This program uses the following regular expression to match the content from sample.txt which is used to break the text up into a []string slice before performing operations (e.g. uppercase, capitalize) on the text. The text is later converted into one string before being serialized into results.txt
 
