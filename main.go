@@ -28,7 +28,7 @@ func main() {
 		contentString += string(b)
 	}
 
-	// match "range a-z", optionally ", number" then match ",", then match non-whitespace (^ = not)
+	// match "range a-z", optionally ", number)" then match ",", then match non-whitespace (^ = not)
 	re := regexp.MustCompile(`\([a-z]+(,\s*\d+)?\)|[,]+|[^\s()]+`)
 	tokens := re.FindAllString(contentString, -1)
 
